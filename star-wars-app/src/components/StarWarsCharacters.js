@@ -34,7 +34,7 @@ export default function StarWarsCharacters() {
   };
 
   return (
-    <div>
+    <div data-testid="character">
       {isLoading ? (
         <Loader
           type="ThreeDots"
@@ -46,7 +46,7 @@ export default function StarWarsCharacters() {
       ) : (
         <>
           {characters.map(character => (
-            <div key={character.url}>{character.name}</div>
+            <div  key={character.url}>{character.name}</div>
           ))}
         </>
       )}
